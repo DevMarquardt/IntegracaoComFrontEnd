@@ -7,6 +7,7 @@ import lombok.*;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "tb_usuario")
 public class Usuario {
     @Id
