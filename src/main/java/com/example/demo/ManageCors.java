@@ -10,7 +10,7 @@ public class ManageCors implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/users")
-                .allowedOrigins("http://localhost:3000") // permite apenas este domínio
+                .allowedOrigins("http://localhost:3000")
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
                 .allowCredentials(true);
     }

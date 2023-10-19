@@ -1,17 +1,21 @@
-package models;
+package com.example.demo.model;
+
 
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.Collection;
+
 @Data
+@Table(name = "tb_turma")
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class Turma {
     @Id
-    @Column(unique = true)
     private String nome;
     @OneToMany
-    private Aluno aluno;
+    private Collection<Aluno> alunos;
     @OneToMany
-    private Professor professor;
+    private Collection<Professor> professores;
 }

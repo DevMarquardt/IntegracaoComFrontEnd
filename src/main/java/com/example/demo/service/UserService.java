@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
-import com.example.demo.model.User;
+import com.example.demo.model.Professor;
+import com.example.demo.model.Usuario;
 import com.example.demo.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -13,19 +14,19 @@ import java.util.Collection;
 public class UserService {
     private UserRepository userRepository;
 
-    public void salvar(User user){
+    public void salvar(Professor user){
         userRepository.save(user);
     }
 
-    public Collection<User> buscarTodos(){
+    public Collection<Usuario> buscarTodos(){
         return userRepository.findAll();
     }
 
-    public User buscarUm(Integer id){
+    public Usuario buscarUm(Integer id){
         return userRepository.findById(id).get();
     }
 
-    public void deletar(User user){
+    public void deletar(Usuario user){
         userRepository.delete(user);
     }
 
