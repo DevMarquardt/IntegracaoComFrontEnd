@@ -12,7 +12,6 @@ import java.util.Collection;
 public class Aluno extends Usuario{
     @OneToOne
     private Turma turma;
-
     @OneToMany
     private Collection<Prova> prova;
 }
