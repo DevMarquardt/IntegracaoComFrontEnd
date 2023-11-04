@@ -12,9 +12,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
-@Controller
+@RestController
 @AllArgsConstructor
-@NoArgsConstructor
 @Data
 @RequestMapping("prova")
 

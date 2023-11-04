@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
-@Controller
-@NoArgsConstructor
+@RestController
 @AllArgsConstructor
 @Data
 @RequestMapping("professor")

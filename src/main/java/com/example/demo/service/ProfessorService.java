@@ -11,11 +11,11 @@ import java.util.Collection;
 
 @Service
 @AllArgsConstructor
-@NoArgsConstructor
 public class ProfessorService {
     private ProfessorRepository repository;
 
     public void salvar(Professor objeto){
+        objeto.setTipo("Professor");
         repository.save(objeto);
     }
     public Professor buscarUm(Integer id){

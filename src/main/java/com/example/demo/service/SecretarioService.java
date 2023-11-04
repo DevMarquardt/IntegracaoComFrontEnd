@@ -11,12 +11,11 @@ import java.util.Collection;
 
 @Service
 @AllArgsConstructor
-@NoArgsConstructor
-
 public class SecretarioService {
     private SecretarioRepository repository;
 
     public void salvar(Secretario secretario){
+        secretario.setTipo("Secretario");
         repository.save(secretario);
     }
     public Secretario buscarUm(Integer id){

@@ -11,7 +11,6 @@ import java.util.Collection;
 
 @Service
 @AllArgsConstructor
-@NoArgsConstructor
 public class ProvaService {
     private ProvaRepository repository;
 

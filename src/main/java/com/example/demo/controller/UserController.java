@@ -16,17 +16,9 @@ import java.util.Collection;
 public class UserController {
     private UserService service;
 
-    @PostMapping
-    public void adicionar(@RequestBody Professor user) {
-        service.salvar(user);
-    }
-
-    @PutMapping("/{id}")
-    public void atualizar(@PathVariable Integer id, @RequestBody Professor user) {
-
-        if (service.buscarUm(id) != null) {
-            service.salvar(user);
-        }
+    @GetMapping("/verificaLogin")
+    public Boolean verificaLogin(@RequestParam Integer matricula, @RequestParam String senha){
+        return service.verificaLogin(matricula, senha);
     }
 
     @GetMapping("/todos")
@@ -35,12 +27,8 @@ public class UserController {
     }
 
     @GetMapping
-    public Usuario buscarUm(@RequestParam Integer id) {
-        return service.buscarUm(id);
+    public Usuario buscarUm(@RequestParam Integer matricula) {
+        return service.buscarUm(matricula);
     }
 
-    @DeleteMapping
-    public void deletar(@RequestBody Usuario user) {
-        service.deletar(user);
-    }
 }

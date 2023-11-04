@@ -12,9 +12,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
-@Controller
+@CrossOrigin(origins = "http://localhost:3000")
+@RestController
 @AllArgsConstructor
-@NoArgsConstructor
 @Data
 @RequestMapping("secretario")
 

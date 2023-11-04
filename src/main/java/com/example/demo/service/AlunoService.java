@@ -10,12 +10,11 @@ import java.util.List;
 
 @Service
 @AllArgsConstructor
-@NoArgsConstructor
-
 public class AlunoService {
     private AlunoRepository repository;
 
     public void salvar(Aluno objeto){
+        objeto.setTipo("Aluno");
         repository.save(objeto);
     }
     public Aluno buscarUm(Integer id){

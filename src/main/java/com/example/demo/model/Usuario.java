@@ -17,5 +17,5 @@ public class Usuario {
     private String endereco;
     private Integer idade;
     private String senha;
-
+    private String tipo;
 }

@@ -11,7 +11,6 @@ import java.util.Collection;
 
 @Service
 @AllArgsConstructor
-@NoArgsConstructor
 public class TurmaService {
     private TurmaRepository repository;
 

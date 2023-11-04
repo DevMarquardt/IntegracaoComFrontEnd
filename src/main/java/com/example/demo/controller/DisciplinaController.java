@@ -13,9 +13,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
-@Controller
+@RestController
 @AllArgsConstructor
-@NoArgsConstructor
 @RequestMapping("disciplina")
 public class DisciplinaController {
     private DisciplinaService service;

@@ -10,13 +10,8 @@ import java.util.Collection;
 
 @AllArgsConstructor
 @Service
-
 public class UserService {
     private UserRepository userRepository;
-
-    public void salvar(Professor user){
-        userRepository.save(user);
-    }
 
     public Collection<Usuario> buscarTodos(){
         return userRepository.findAll();
@@ -28,6 +23,16 @@ public class UserService {
 
     public void deletar(Usuario user){
         userRepository.delete(user);
+    }
+
+    public Boolean verificaLogin(Integer matricula, String senha){
+        for (Usuario user:
+             userRepository.findAll()) {
+            if(user.getMatricula().equals(matricula) && user.getSenha().equals(senha)){
+                return true;
+            }
+        }
+        return false;
     }
 
 }
